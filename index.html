@@ -3,26 +3,59 @@
 <head>
     <title>BRKF PPC Landing Page</title>
     <style>
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            src: url(https://fonts.gstatic.com/s/roboto/v18/5YB-ifwqHP20Yn46l_BDhA.eot);
-        }
-        @font-face {
-            font-family: 'Roboto Condensed';
-            font-style: normal;
-            font-weight: 400;
-            src: url(https://fonts.gstatic.com/s/robotocondensed/v16/Zd2E9abXLFGSr9G3YK2MsG8ITcfo9NwJpvZiO7_FxEg.eot);
-        }
-        @import url(css/foundation.css);
-        @import url(css/brkf-main.css);
+        @import url('http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700');
+        @import url('css/foundation.css');
+        @import url('css/brkf-main.css');
 
     </style>
 </head>
 <body>
+    <header>
+        <div class="wrap">
+            <div class="grid-6"></div>
+            <div class="grid-6"></div>
+        </div>
+    </header>
 
-    <h1>Today's best Caravan Park deals in {{REGION}}</h1>
+
+    <section id="hero">
+        <div class="wrap">
+            <div class="grid-6">
+                <h1>Today's best Caravan Park deals in {{REGION}}</h1>
+            </div>
+            <div class="grid-6">
+                <!-- pull on mobile -->
+            </div>
+        </div>
+    </section>
+
+    <section id="bullets">
+        <h2>Join Over 100,000 Satisfied Customers</h2>
+        <div class="wrap">
+            <div class="grid-4"></div>
+            <div class="grid-4"></div>
+            <div class="grid-4"></div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="wrap">
+            <div class="grid-4">
+                <!-- Copy 1st Desktop/ 3rd Mobile -->
+                <h2>Explore {{REGION}}</h2>
+            </div>
+            <div class="grid-4">
+                <!-- *3 Park Listings 2nd Desktop/ 1st Mobile -->
+                <h2>Popular Caravan Parks in {{REGION}}</h2>
+            </div>
+            <div class="grid-4">
+                <!-- Park Reviews 3rd Desktop/ 2nd Mobile -->
+                <h2>Trusted Travel Site</h2>
+            </div>
+        </div>
+    </section>
+
+    
 
 </body>
 </html>
