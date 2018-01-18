@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>BRKF PPC Landing Page</title>
     <style>
@@ -7,55 +8,442 @@
         @import url('css/foundation.css');
         @import url('css/brkf-main.css');
 
+        #hero {
+            padding: 3rem 0;
+        }
+
+        #hero h1 {
+            font: normal 3rem "Roboto Condensed", sans-serif;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        #hero p {
+            font: normal 1.75rem "Roboto Condensed", sans-serif;
+        }
+
+        .brkf-ppc-searchwrap {
+            background: #eee;
+            border: 1px solid #023858;
+            border-radius: 0.2rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        #bullets,
+        #hero {
+            background-color: #265eb2;
+            color: #fff;
+        }
+
+        #bullets h2 {
+            color: #fff;
+            margin: 2rem auto;
+            text-transform: uppercase;
+            font: 400 2rem 'Roboto Condensed';
+        }
+
+        .brkf-ppc-tick {
+            color: #fff;
+            background: url(images/tick.svg) 0 0 no-repeat;
+            background-size: 37px;
+            padding-left: 50px;
+            margin-bottom: 5rem;
+            min-height: 37px;
+        }
+
+        #content .offer-text {
+            font: 500 1rem Roboto, sans-serif;
+            color: #265eb2;
+            margin-bottom: 0;
+        }
+
+        #content h3 {
+            font: 500 1.2rem Roboto, sans-serif;
+        }
+
+        #brkf-ppc-subscribe {
+            margin-top: 3rem;
+        }
+
+        #brkf-ppc-search {
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom:3rem;
+        }
+
+        #brkf-ppc-search input {
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+            color: #023858;
+            ;
+            font: bold 1rem Roboto, sans-serif;
+            border: 0;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 0;
+            background: url(images/search.svg) 0.5rem 50% no-repeat #fff;
+            background-size: 1rem;
+            padding: 0.8rem 2rem;
+        }
+
+        #brkf-ppc-search p {
+            color: #023858;
+            font-size: 1rem;
+        }
+
+        #brkf-ppc-search span {
+            display: block;
+            width: 100%;
+            font: normal 0.8rem/1rem Roboto, sans-serif;
+            color: #023858;
+            padding: 1rem 2rem;
+            background: url(images/cal.svg) 0.5rem 50% no-repeat;
+            background-size: 1rem;
+        }
+
+        .brkf-ppc-button {
+            border: 1px solid #691;
+            border-radius: 0.2rem;
+            background-color: #99cc00;
+            background: linear-gradient(to bottom, #9c0 25%, #691 100%);
+            color: #fff;
+            box-shadow: 0px 2px 3px 0px rgba(0, 32, 51, 0.25);
+            font: 500 1rem "Roboto", sans-serif;
+            padding: 0.8rem;
+            display: block;
+            width: 100%;
+        }
+
+        .brkf-ppc-park h3 {
+            font: bold 1rem Roboto, sans-serif;
+        }
+
+        .brkf-ppc-park p {
+            font: normal 0.8rem Roboto, sans-serif;
+            ;
+        }
+
+        .brkf-ppc-park {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            margin: 1rem auto;
+        }
+
+        .brkf-ppc-park.row {
+            margin: 0 auto 1rem;
+        }
+
+        .brkf-ppc-park .small-4 {
+            padding: 0;
+            background-size: cover;
+            background-position: 50% 50%;
+            margin: 0 !important;
+        }
+
+        .brkf-ppc-park .small-8 {
+            padding: 0.5rem 1rem;
+        }
+
+        .stars {
+            padding: 1rem;
+        }
+
+        .stars i {
+            display: inline-block;
+            height: 1.8rem;
+            width: 2.3rem;
+            background: url(images/star.png) 50% 100% no-repeat;
+            background-size: cover;
+        }
+
+        .stars p {
+            color: #023858;
+            font: 500 1rem/1.5rem Roboto, sans-serif;
+            margin-top: 1rem;
+        }
+
+        .stars cite {
+            font: normal 0.8rem sans-serif;
+            color: #ccc;
+        }
+        header {
+            background: #fff;
+            padding:0.8rem;
+        }
+        head
+        footer {
+            border-top: 1px solid #ccc;
+            width: 100%;
+            font: normal 0.8rem Roboto, sans-serif;
+            color: #999;
+            margin-top: 3rem;
+            padding: 2rem 0 1rem;
+        }
+        .brkf-ppc-logo img {
+            max-width:190px;
+        }
+        .brkf-ppc-feefologo {max-width:66px; display: inline-block;}
+        .brkf-ppc-feefo {font-size:0.6rem; margin-bottom: 0; float:right;}
+        .bkrf-star {}
+        .bkrf-star-o {}
+        .yellow {color:#FFDD00;}
+        .grey {color: #ccc;}
+
+        /* Overides */
+
+        .home-offer-title-box {
+            bottom: 1rem;
+            box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            border: 1px solid #ddd;
+            margin: 0;
+        }
+
+        #content .column {
+            margin-bottom: 1rem;
+        }
+
+        #feefo-outer {
+            width:60px;
+            height:10px;
+            margin: 0 1rem 0 0;
+            background:url(images/star.png) 0 0 repeat-x;
+            background-size: 12px;
+            line-height: 10px;
+            display: inline-block;
+        }
+        #feefo-inner {
+            display: inline-block;
+            height:10px;
+            width:88.5%;
+            background:url(images/star.png) 0 100% repeat-x;
+            background-size: 12px;
+
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <div class="wrap">
-            <div class="grid-6"></div>
-            <div class="grid-6"></div>
+        <div class="row">
+            <div class="small-6 column">
+                <a class="brkf-ppc-logo" href="/" title="BreakFree Holidays | Search hundreds of holiday parks &amp; campsites in the UK &amp; Europe.">
+                    <img src="images/logo-bf.png" alt="BreakFree Holidays">
+                </a>
+            </div>
+            <div class="small-6 column">
+                <p class="brkf-ppc-feefo">
+                    <img class="brkf-ppc-feefologo show-for-medium" src="images/feefo.png" />
+                    <span id="feefo-outer"><span id="feefo-inner"></span></span>
+                    Based on <span id="brkf-ppc-feefo-reviews"></span> reviews over the past year
+                </p>
+            </div>
         </div>
     </header>
 
 
     <section id="hero">
-        <div class="wrap">
-            <div class="grid-6">
-                <h1>Today's best Caravan Park deals in {{REGION}}</h1>
+        <div class="row">
+            <div class="large-5 large-push-7 column">
+                <!-- Search Box -->
+                <div id="brkf-ppc-search">
+                    <p>Search for caravan park holidays in Wales</p>
+                    <form>
+                        <div class="brkf-ppc-searchwrap">
+                            <input type="text" list="regions" placeholder="Select a region..." value="Wales" autocomplete="off" />
+                            <datalist id="regions">
+                                <option value="England" />
+                                <option value="Northern Ireland" />
+                                <option value="Scotland" />
+                                <option value="Wales" />
+                            </datalist>
+                            <span>28 April - 4 May (4 nights)</span>
+                        </div>
+                        <button class="brkf-ppc-button">Search Wales</button>
+                    </form>
+                </div>
+
             </div>
-            <div class="grid-6">
-                <!-- pull on mobile -->
+            <div class="large-7 large-pull-5 column">
+                <h1>Today's Best Caravan Park
+                    <br/>
+                    <strong>deals in Wales</strong>
+                </h1>
+                <p>Today's best deals from Haven, Park Holidays UK, Parkdean Resorts and more...</p>
             </div>
+
         </div>
     </section>
 
     <section id="bullets">
-        <h2>Join Over 100,000 Satisfied Customers</h2>
-        <div class="wrap">
-            <div class="grid-4"></div>
-            <div class="grid-4"></div>
-            <div class="grid-4"></div>
-        </div>
-    </section>
-
-    <section id="content">
-        <div class="wrap">
-            <div class="grid-4">
-                <!-- Copy 1st Desktop/ 3rd Mobile -->
-                <h2>Explore {{REGION}}</h2>
+        <div class="row">
+            <div class="medium-12">
+                <h2 class="text-center">Join Over 100,000 Satisfied Customers</h2>
             </div>
-            <div class="grid-4">
-                <!-- *3 Park Listings 2nd Desktop/ 1st Mobile -->
-                <h2>Popular Caravan Parks in {{REGION}}</h2>
+            <div class="medium-4 column">
+                <p class="brkf-ppc-tick">Spring and early summer breaks
+                    <strong>from &pound;49.99</strong>
+                </p>
             </div>
-            <div class="grid-4">
-                <!-- Park Reviews 3rd Desktop/ 2nd Mobile -->
-                <h2>Trusted Travel Site</h2>
+            <div class="medium-4 column">
+                <p class="brkf-ppc-tick">Featured
+                    <strong>holiday parks</strong> include Haven's Quay West and Parkdean Resorts' Carmarthen Bay</p>
+            </div>
+            <div class="medium-4 column">
+                <p class="brkf-ppc-tick">Get great accommodation plus pools, entertainment and
+                    <strong>loads of activities</strong>
+                </p>
             </div>
         </div>
     </section>
 
-    
+
+
+    <div class="row" id="content">
+
+
+        <div class="large-4 large-push-4 column">
+            <div class="home-offer-title-box">
+                <h2 class="offer-text text-center">Popular Caravan Parks in
+                    <br />Wales</h2>
+            </div>
+
+            <div class="brkf-ppc-park row">
+                <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
+                    &nbsp;
+                </div>
+                <div class="small-8 column">
+                    <h3>{{PARK NAME}}</h3>
+                    <p>Somewhere, Wales</p>
+                </div>
+            </div>
+
+            <div class="brkf-ppc-park row">
+                <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
+                    &nbsp;
+                </div>
+                <div class="small-8 column">
+                    <h3>{{PARK NAME}}</h3>
+                    <p>Somewhere, Wales</p>
+                </div>
+            </div>
+
+            <div class="brkf-ppc-park row">
+                <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
+                    &nbsp;
+                </div>
+                <div class="small-8 column">
+                    <h3>{{PARK NAME}}</h3>
+                    <p>Somewhere, Wales</p>
+                </div>
+            </div>
+
+            <div class="brkf-ppc-park row">
+                    <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
+                        &nbsp;
+                    </div>
+                    <div class="small-8 column">
+                        <h3>{{PARK NAME}}</h3>
+                        <p>Somewhere, Wales</p>
+                    </div>
+                </div>            
+
+            <div class="brkf-ppc-park row">
+                <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
+                    &nbsp;
+                </div>
+                <div class="small-8 column">
+                    <h3>{{PARK NAME}}</h3>
+                    <p>Somewhere, Wales</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="large-4 large-push-4 column">
+            <!-- Park Reviews 3rd Desktop/ 2nd Mobile -->
+            <div class="home-offer-title-box">
+                <h2 class="offer-text text-center">Trusted
+                    <br />Travel Site</h2>
+            </div>
+
+            <div class="text-center stars">
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <p>This is the third time I have booked a holiday with you, very easy to book , excellent service, will be looking
+                    to book again next year.</p>
+                <cite>Mr Hurst in Maidstone</cite>
+            </div>
+            <div class="text-center stars">
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <p>A comprehensive choice with easy to book information.</p>
+                <cite>Mrs Reynolds</cite>
+            </div>
+            <div class="text-center stars">
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <i>&nbsp;</i>
+                <p>As always a very satisfactory experience. I have booked 5 holidays with them recently!</p>
+                <cite>Mrs Kneil</cite>
+            </div>
+
+        </div>
+        <div class="large-4 large-pull-8 column">
+            <!-- Copy 1st Desktop/ 3rd Mobile -->
+            <div class="home-offer-title-box">
+                <h2 class="offer-text text-center">Explore
+                    <br />Wales</h2>
+
+            </div>
+            <h3>Wales is a wonderful place to holiday</h3>
+            <p>We've teamed up with your favourite holiday parks from Haven, Park Holidays UK, Parkdean Resorts and more, to
+                bring you great deals on caravan breaks in Wales.</p>
+            <p>Our featured holiday parks in Wales include Haven's Quay West, Kiln Park, Greenacres, Hafan Y Mor and Presthaven
+                Sands, and Parkdean Resorts' Carmarthen Bay, Brynowen and Ty Mawr sites, so you get great accommodation plus
+                pools, entertainment and loads of activities.</p>
+
+            <div id="brkf-ppc-subscribe">
+                <h3>Get alerts on holiday deals!</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email address" required />
+                    <button type="submit" class="button round brand-secondary-btn expanded">Subscribe</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="column">
+                <p>BreakFree Holidays are registered in England No. 05753643 | Copyright &copy; BreakFree Holidays. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Unavoidable script to equalise column heights.
+        var pr = document.querySelectorAll('.brkf-ppc-park');
+        pr.forEach(element => {
+            element.children[0].style.height = element.offsetHeight + 'px';
+            console.log(element.offsetHeight);
+        });
+
+        // Feefo Data, need toget this.
+        var feefoReviewsQty = 2713;
+        document.getElementById('brkf-ppc-feefo-reviews').innerHTML = feefoReviewsQty.toLocaleString();
+    </script>
 
 </body>
+
 </html>
