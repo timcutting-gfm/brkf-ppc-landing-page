@@ -70,7 +70,7 @@
             background: #fff;
             padding: 1rem;
             box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-            margin-bottom:3rem;
+            margin-bottom: 3rem;
         }
 
         #brkf-ppc-search input {
@@ -92,7 +92,7 @@
             font-size: 1rem;
         }
 
-        #brkf-ppc-search span {
+        #brkf-ppc-search .brkf-ppc-date {
             display: block;
             width: 100%;
             font: normal 0.8rem/1rem Roboto, sans-serif;
@@ -109,8 +109,9 @@
             background: linear-gradient(to bottom, #9c0 25%, #691 100%);
             color: #fff;
             box-shadow: 0px 2px 3px 0px rgba(0, 32, 51, 0.25);
+            text-shadow: 0 0.05rem 0.05rem rgba(0,0,0,0.1);
             font: 500 1rem "Roboto", sans-serif;
-            padding: 0.8rem;
+            padding: 1rem;
             display: block;
             width: 100%;
         }
@@ -121,7 +122,6 @@
 
         .brkf-ppc-park p {
             font: normal 0.8rem Roboto, sans-serif;
-            ;
         }
 
         .brkf-ppc-park {
@@ -167,11 +167,12 @@
             font: normal 0.8rem sans-serif;
             color: #ccc;
         }
+
         header {
             background: #fff;
-            padding:0.8rem;
+            padding: 0.8rem;
         }
-        head
+
         footer {
             border-top: 1px solid #ccc;
             width: 100%;
@@ -180,15 +181,21 @@
             margin-top: 3rem;
             padding: 2rem 0 1rem;
         }
+
         .brkf-ppc-logo img {
-            max-width:190px;
+            max-width: 190px;
         }
-        .brkf-ppc-feefologo {max-width:66px; display: inline-block;}
-        .brkf-ppc-feefo {font-size:0.6rem; margin-bottom: 0; float:right;}
-        .bkrf-star {}
-        .bkrf-star-o {}
-        .yellow {color:#FFDD00;}
-        .grey {color: #ccc;}
+
+        .brkf-ppc-feefologo {
+            max-width: 66px;
+            display: inline-block;
+        }
+
+        .brkf-ppc-feefo {
+            font-size: 0.6rem;
+            margin-bottom: 0;
+            float: right;
+        }
 
         /* Overides */
 
@@ -204,21 +211,21 @@
         }
 
         #feefo-outer {
-            width:60px;
-            height:10px;
+            width: 60px;
+            height: 10px;
             margin: 0 1rem 0 0;
-            background:url(images/star.png) 0 0 repeat-x;
+            background: url(images/star.png) 0 0 repeat-x;
             background-size: 12px;
             line-height: 10px;
             display: inline-block;
         }
+
         #feefo-inner {
             display: inline-block;
-            height:10px;
-            width:88.5%;
-            background:url(images/star.png) 0 100% repeat-x;
+            height: 10px;
+            width: 88.5%;
+            background: url(images/star.png) 0 100% repeat-x;
             background-size: 12px;
-
         }
     </style>
 </head>
@@ -234,8 +241,11 @@
             <div class="small-6 column">
                 <p class="brkf-ppc-feefo">
                     <img class="brkf-ppc-feefologo show-for-medium" src="images/feefo.png" />
-                    <span id="feefo-outer"><span id="feefo-inner"></span></span>
-                    Based on <span id="brkf-ppc-feefo-reviews"></span> reviews over the past year
+                    <span id="feefo-outer">
+                        <span id="feefo-inner"></span>
+                    </span>
+                    Based on
+                    <span id="brkf-ppc-feefo-reviews"></span> reviews over the past year
                 </p>
             </div>
         </div>
@@ -247,19 +257,23 @@
             <div class="large-5 large-push-7 column">
                 <!-- Search Box -->
                 <div id="brkf-ppc-search">
-                    <p>Search for caravan park holidays in Wales</p>
+                    <p>Search for caravan park holidays in
+                        <span class="region-pop-html"></span>
+                    </p>
                     <form>
                         <div class="brkf-ppc-searchwrap">
-                            <input type="text" list="regions" placeholder="Select a region..." value="Wales" autocomplete="off" />
+                            <input id="region-pop-val" type="text" list="regions" placeholder="Select a region..." value="" autocomplete="off" />
                             <datalist id="regions">
                                 <option value="England" />
                                 <option value="Northern Ireland" />
                                 <option value="Scotland" />
                                 <option value="Wales" />
                             </datalist>
-                            <span>28 April - 4 May (4 nights)</span>
+                            <span class="brkf-ppc-date">28 April - 4 May (4 nights)</span>
                         </div>
-                        <button class="brkf-ppc-button">Search Wales</button>
+                        <button class="brkf-ppc-button">Search
+                            <span class="region-pop-html"></span>
+                        </button>
                     </form>
                 </div>
 
@@ -267,7 +281,9 @@
             <div class="large-7 large-pull-5 column">
                 <h1>Today's Best Caravan Park
                     <br/>
-                    <strong>deals in Wales</strong>
+                    <strong>deals in
+                        <span class="region-pop-html"></span>
+                    </strong>
                 </h1>
                 <p>Today's best deals from Haven, Park Holidays UK, Parkdean Resorts and more...</p>
             </div>
@@ -305,7 +321,9 @@
         <div class="large-4 large-push-4 column">
             <div class="home-offer-title-box">
                 <h2 class="offer-text text-center">Popular Caravan Parks in
-                    <br />Wales</h2>
+                    <br />
+                    <span class="region-pop-html"></span>
+                </h2>
             </div>
 
             <div class="brkf-ppc-park row">
@@ -339,14 +357,14 @@
             </div>
 
             <div class="brkf-ppc-park row">
-                    <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
-                        &nbsp;
-                    </div>
-                    <div class="small-8 column">
-                        <h3>{{PARK NAME}}</h3>
-                        <p>Somewhere, Wales</p>
-                    </div>
-                </div>            
+                <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
+                    &nbsp;
+                </div>
+                <div class="small-8 column">
+                    <h3>{{PARK NAME}}</h3>
+                    <p>Somewhere, Wales</p>
+                </div>
+            </div>
 
             <div class="brkf-ppc-park row">
                 <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
@@ -401,7 +419,9 @@
             <!-- Copy 1st Desktop/ 3rd Mobile -->
             <div class="home-offer-title-box">
                 <h2 class="offer-text text-center">Explore
-                    <br />Wales</h2>
+                    <br />
+                    <span class="region-pop-html"></span>
+                </h2>
 
             </div>
             <h3>Wales is a wonderful place to holiday</h3>
@@ -426,20 +446,31 @@
     <footer>
         <div class="row">
             <div class="column">
-                <p>BreakFree Holidays are registered in England No. 05753643 | Copyright &copy; BreakFree Holidays. All rights
-                    reserved.</p>
+                <p>BreakFree Holidays are registered in England No. 05753643 | Copyright &copy; BreakFree Holidays. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+
+    <div id="brkf-ppc-mod">
+        <!-- Pull in Search modal and modify inpage?!
+        <TMPL_VAR NAME="SEARCH_PANEL">
+        -->
+    </div>
+
     <script>
+        // Get region from URL and populate:
+        var region = location.search.split('r=')[1]
+        if (region == undefined) { region = 'UK'; }
+        rhtm = document.querySelectorAll('.region-pop-html');
+        rhtm.forEach(el => { el.innerHTML = region; });
+        document.getElementById('region-pop-val').setAttribute('value', region);
+
         // Unavoidable script to equalise column heights.
         var pr = document.querySelectorAll('.brkf-ppc-park');
-        pr.forEach(element => {
-            element.children[0].style.height = element.offsetHeight + 'px';
-            console.log(element.offsetHeight);
-        });
+        pr.forEach(el => { el.children[0].style.height = el.offsetHeight + 'px'; });
 
-        // Feefo Data, need toget this.
+        // Feefo Data, get thi from api (need merchant_identifier).
         var feefoReviewsQty = 2713;
         document.getElementById('brkf-ppc-feefo-reviews').innerHTML = feefoReviewsQty.toLocaleString();
     </script>
