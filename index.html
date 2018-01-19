@@ -4,7 +4,7 @@
 <head>
     <title>BRKF PPC Landing Page</title>
     <style>
-        @import url('http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700');
+        @import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700');
         @import url('css/foundation.css');
         @import url('css/brkf-main.css');
 
@@ -13,9 +13,10 @@
         }
 
         #hero h1 {
-            font: normal 3rem "Roboto Condensed", sans-serif;
+            font: 400 3.2rem "Roboto Condensed", sans-serif;
             color: #fff;
             margin-bottom: 2rem;
+            letter-spacing: -1px;
         }
 
         #hero p {
@@ -109,7 +110,7 @@
             background: linear-gradient(to bottom, #9c0 25%, #691 100%);
             color: #fff;
             box-shadow: 0px 2px 3px 0px rgba(0, 32, 51, 0.25);
-            text-shadow: 0 0.05rem 0.05rem rgba(0,0,0,0.1);
+            text-shadow: 0 0.05rem 0.05rem rgba(0, 0, 0, 0.1);
             font: 500 1rem "Roboto", sans-serif;
             padding: 1rem;
             display: block;
@@ -210,7 +211,7 @@
             margin-bottom: 1rem;
         }
 
-        #feefo-outer {
+        .feefo-outer {
             width: 60px;
             height: 10px;
             margin: 0 1rem 0 0;
@@ -220,17 +221,36 @@
             display: inline-block;
         }
 
-        #feefo-inner {
+        .feefo-outer.feefo-big {
+            width: 180px;
+            height: 30px;
+            line-height: 30px;
+            background-size: 36px;
+        }
+
+        .feefo-inner {
             display: inline-block;
+            width: 100%;
             height: 10px;
-            width: 88.5%;
             background: url(images/star.png) 0 100% repeat-x;
             background-size: 12px;
+        }
+
+        .feefo-big .feefo-inner {
+            height: 30px;
+            background-size: 36px;
+        }
+
+        /* Hide TMPL's for now... */
+
+        #brkf-ppc-mod {
+            display: none;
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <div class="row">
             <div class="small-6 column">
@@ -241,8 +261,8 @@
             <div class="small-6 column">
                 <p class="brkf-ppc-feefo">
                     <img class="brkf-ppc-feefologo show-for-medium" src="images/feefo.png" />
-                    <span id="feefo-outer">
-                        <span id="feefo-inner"></span>
+                    <span class="feefo-outer">
+                        <span class="feefo-inner" id="brkf-ppc-feefo-stars"></span>
                     </span>
                     Based on
                     <span id="brkf-ppc-feefo-reviews"></span> reviews over the past year
@@ -250,7 +270,6 @@
             </div>
         </div>
     </header>
-
 
     <section id="hero">
         <div class="row">
@@ -264,10 +283,10 @@
                         <div class="brkf-ppc-searchwrap">
                             <input id="region-pop-val" type="text" list="regions" placeholder="Select a region..." value="" autocomplete="off" />
                             <datalist id="regions">
-                                <option value="England" />
-                                <option value="Northern Ireland" />
-                                <option value="Scotland" />
-                                <option value="Wales" />
+                                <option value="England"></option>
+                                <option value="Northern Ireland"></option>
+                                <option value="Scotland"></option>
+                                <option value="Wales"></option>
                             </datalist>
                             <span class="brkf-ppc-date">28 April - 4 May (4 nights)</span>
                         </div>
@@ -287,7 +306,6 @@
                 </h1>
                 <p>Today's best deals from Haven, Park Holidays UK, Parkdean Resorts and more...</p>
             </div>
-
         </div>
     </section>
 
@@ -313,11 +331,7 @@
         </div>
     </section>
 
-
-
-    <div class="row" id="content">
-
-
+    <section class="row" id="content">
         <div class="large-4 large-push-4 column">
             <div class="home-offer-title-box">
                 <h2 class="offer-text text-center">Popular Caravan Parks in
@@ -325,7 +339,6 @@
                     <span class="region-pop-html"></span>
                 </h2>
             </div>
-
             <div class="brkf-ppc-park row">
                 <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
                     &nbsp;
@@ -335,7 +348,6 @@
                     <p>Somewhere, Wales</p>
                 </div>
             </div>
-
             <div class="brkf-ppc-park row">
                 <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
                     &nbsp;
@@ -345,7 +357,6 @@
                     <p>Somewhere, Wales</p>
                 </div>
             </div>
-
             <div class="brkf-ppc-park row">
                 <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
                     &nbsp;
@@ -355,7 +366,6 @@
                     <p>Somewhere, Wales</p>
                 </div>
             </div>
-
             <div class="brkf-ppc-park row">
                 <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
                     &nbsp;
@@ -365,7 +375,6 @@
                     <p>Somewhere, Wales</p>
                 </div>
             </div>
-
             <div class="brkf-ppc-park row">
                 <div class="small-4 column" style="background-image:url(http://via.placeholder.com/120x96);">
                     &nbsp;
@@ -375,45 +384,35 @@
                     <p>Somewhere, Wales</p>
                 </div>
             </div>
-
         </div>
-
         <div class="large-4 large-push-4 column">
             <!-- Park Reviews 3rd Desktop/ 2nd Mobile -->
             <div class="home-offer-title-box">
                 <h2 class="offer-text text-center">Trusted
                     <br />Travel Site</h2>
             </div>
-
             <div class="text-center stars">
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
+                <span class="feefo-outer feefo-big">
+                    <span class="feefo-inner"></span>
+                </span>
                 <p>This is the third time I have booked a holiday with you, very easy to book , excellent service, will be looking
                     to book again next year.</p>
                 <cite>Mr Hurst in Maidstone</cite>
             </div>
             <div class="text-center stars">
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
+                <span class="feefo-outer feefo-big">
+                    <span class="feefo-inner"></span>
+                </span>
                 <p>A comprehensive choice with easy to book information.</p>
                 <cite>Mrs Reynolds</cite>
             </div>
             <div class="text-center stars">
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
-                <i>&nbsp;</i>
+                <span class="feefo-outer feefo-big">
+                    <span class="feefo-inner"></span>
+                </span>
                 <p>As always a very satisfactory experience. I have booked 5 holidays with them recently!</p>
                 <cite>Mrs Kneil</cite>
             </div>
-
         </div>
         <div class="large-4 large-pull-8 column">
             <!-- Copy 1st Desktop/ 3rd Mobile -->
@@ -422,7 +421,6 @@
                     <br />
                     <span class="region-pop-html"></span>
                 </h2>
-
             </div>
             <h3>Wales is a wonderful place to holiday</h3>
             <p>We've teamed up with your favourite holiday parks from Haven, Park Holidays UK, Parkdean Resorts and more, to
@@ -430,7 +428,6 @@
             <p>Our featured holiday parks in Wales include Haven's Quay West, Kiln Park, Greenacres, Hafan Y Mor and Presthaven
                 Sands, and Parkdean Resorts' Carmarthen Bay, Brynowen and Ty Mawr sites, so you get great accommodation plus
                 pools, entertainment and loads of activities.</p>
-
             <div id="brkf-ppc-subscribe">
                 <h3>Get alerts on holiday deals!</h3>
                 <form>
@@ -438,10 +435,8 @@
                     <button type="submit" class="button round brand-secondary-btn expanded">Subscribe</button>
                 </form>
             </div>
-
-
         </div>
-    </div>
+    </section>
 
     <footer>
         <div class="row">
@@ -451,28 +446,37 @@
         </div>
     </footer>
 
-
     <div id="brkf-ppc-mod">
-        <!-- Pull in Search modal and modify inpage?!
+        <!-- Pull in Search modal and modify inpage?! -->
         <TMPL_VAR NAME="SEARCH_PANEL">
-        -->
+        <TMPL_VAR NAME="PAGE_NAME">
+        <TMPL_VAR NAME="CONTENT">
+        <TMPL_VAR NAME="TITLE">
+        <TMPL_VAR NAME="SUB_TITLE">
+
+        <TMPL_IF NAME="HAS_TITLE_SUMMARY_PARAGRAPH">
+            <!-- Has TITLE_SUMMARY_PARAGRAPH -->
+            <TMPL_VAR NAME="TITLE_SUMMARY_PARAGRAPH">
+        </TMPL_IF>
     </div>
 
     <script>
         // Get region from URL and populate:
-        var region = location.search.split('r=')[1]
-        if (region == undefined) { region = 'UK'; }
-        rhtm = document.querySelectorAll('.region-pop-html');
+        var r = /r=([^&#=]*)/.exec(window.location.search); // gets 'r' value only.
+        r ? region=r[1] : region='UK';
+        var rhtm = document.querySelectorAll('.region-pop-html');
         rhtm.forEach(el => { el.innerHTML = region; });
         document.getElementById('region-pop-val').setAttribute('value', region);
 
-        // Unavoidable script to equalise column heights.
+        // Unavoidable script to equalise column heights. Consider Foundation Equalizer?
         var pr = document.querySelectorAll('.brkf-ppc-park');
         pr.forEach(el => { el.children[0].style.height = el.offsetHeight + 'px'; });
 
-        // Feefo Data, get thi from api (need merchant_identifier).
-        var feefoReviewsQty = 2713;
-        document.getElementById('brkf-ppc-feefo-reviews').innerHTML = feefoReviewsQty.toLocaleString();
+        // Feefo Data, get this from api? (need merchant_identifier).
+        var frq = 2713;
+        var frs = 4.4;
+        document.getElementById('brkf-ppc-feefo-reviews').innerHTML = frq.toLocaleString();
+        document.getElementById('brkf-ppc-feefo-stars').style.width = frs * 20 + '%';
     </script>
 
 </body>
